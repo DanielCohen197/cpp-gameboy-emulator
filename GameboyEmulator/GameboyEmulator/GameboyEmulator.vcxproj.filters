@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="EmulatorRunner">
+      <UniqueIdentifier>{ca5babdf-1a96-48ff-937b-f4bd27db9791}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{2198e4e6-d6eb-462f-80c5-82cef8c5ef43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MMU">
+      <UniqueIdentifier>{ea6c8b99-52d1-4021-93dd-bf9fa65663ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MMU\CartridgeStructs">
+      <UniqueIdentifier>{1d6f2538-c9af-4b68-8d3b-bbb954d381dc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MMU\MMU.cpp">
+      <Filter>MMU</Filter>
+    </ClCompile>
+    <ClCompile Include="EmulatorRunner\EmulatorRunner.cpp">
+      <Filter>EmulatorRunner</Filter>
+    </ClCompile>
+    <ClCompile Include="HeapBuffer\HeapBuffer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MMU\MMU.hpp">
+      <Filter>MMU</Filter>
+    </ClInclude>
+    <ClInclude Include="EmulatorRunner\EmulatorRunner.hpp">
+      <Filter>EmulatorRunner</Filter>
+    </ClInclude>
+    <ClInclude Include="Common.hpp">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="MMU\CartridgeStructs.hpp">
+      <Filter>MMU\CartridgeStructs</Filter>
+    </ClInclude>
+    <ClInclude Include="HeapBuffer\HeapBuffer.hpp" />
+  </ItemGroup>
+</Project>
