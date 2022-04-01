@@ -1,8 +1,9 @@
+#include "CPU/CPU.hpp"
 #include "ThirdParty/json.hpp"
 #include "EmulatorRunner/EmulatorRunner.hpp"
 
-std::wstring game_path = L"..\\..\\Additional Items\\snake.gb";
-std::wstring instruction_json_path = L"..\\..\\Additional Items\\instruction_json.json";
+std::wstring game_path = LR"(..\..\Additional Items\snake.gb)";
+std::wstring instruction_json_path = LR"(..\..\Additional Items\instruction_json.json)";
 
 int main()
 {

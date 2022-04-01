@@ -19,14 +19,14 @@ nlohmann::json::value_type& CPU::get_next_instruction_()
 {
 	nlohmann::json& instruction_dictionary = (*m_instruction_dictionaries)["unprefixed"];
 
-	uint8_t opcode = m_MMU->read_byte(m_instruction_pointer);
-	m_instruction_pointer++;
+	uint8_t opcode = m_MMU->read_byte(m_registers.PC);
+	(m_registers.PC)++;
 
 	// Some of the opcodes are prefixed, so get the opcode after after the prefix
 	if (instruction_prefix == opcode)
 	{
-		opcode = m_MMU->read_byte(m_instruction_pointer);
-		m_instruction_pointer++;
+		opcode = m_MMU->read_byte(m_registers.PC);
+		(m_registers.PC)++;
 
 		instruction_dictionary = (*m_instruction_dictionaries)["cbprefixed"];
 	}
@@ -48,15 +48,15 @@ void CPU::fill_in_operands_(nlohmann::json::value_type& instruction)
 			switch (byte_count)
 			{
 			case 1:
-				value = m_MMU->read_byte(m_instruction_pointer);
+				value = m_MMU->read_byte(m_registers.PC);
 				break;
 			case 2:
-				value = m_MMU->read_word(m_instruction_pointer);
+				value = m_MMU->read_word(m_registers.PC);
 				break;
 			default:
 				throw std::runtime_error("Unknown bytes count in operand");
 			}
-			m_instruction_pointer += byte_count;
+			m_registers.PC += byte_count;
 			operand["value"] = value;
 		}
 	}

@@ -156,9 +156,10 @@
     <ClInclude Include="CPU\CPU.hpp" />
     <ClInclude Include="HeapBuffer\HeapBuffer.hpp" />
     <ClInclude Include="MMU\MMU.hpp" />
-    <ClInclude Include="Common.hpp" />
+    <ClInclude Include="Common\Common.hpp" />
     <ClInclude Include="EmulatorRunner\EmulatorRunner.hpp" />
     <ClInclude Include="MMU\CartridgeStructs.hpp" />
+    <ClInclude Include="Registers\Regsiters.hpp" />
     <ClInclude Include="ThirdParty\json.hpp" />
     <ClInclude Include="Utils\HexUtils.hpp" />
   </ItemGroup>

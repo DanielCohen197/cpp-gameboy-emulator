@@ -45,7 +45,7 @@
     <ClInclude Include="EmulatorRunner\EmulatorRunner.hpp">
       <Filter>EmulatorRunner</Filter>
     </ClInclude>
-    <ClInclude Include="Common.hpp">
+    <ClInclude Include="Common\Common.hpp">
       <Filter>Common</Filter>
     </ClInclude>
     <ClInclude Include="MMU\CartridgeStructs.hpp">
@@ -55,5 +55,6 @@
     <ClInclude Include="CPU\CPU.hpp" />
     <ClInclude Include="ThirdParty\json.hpp" />
     <ClInclude Include="Utils\HexUtils.hpp" />
+    <ClInclude Include="Registers\Regsiters.hpp" />
   </ItemGroup>
 </Project>
