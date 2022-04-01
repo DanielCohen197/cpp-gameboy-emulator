@@ -31,6 +31,12 @@
     <ClCompile Include="HeapBuffer\HeapBuffer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CPU\CPU.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\HexUtils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MMU\MMU.hpp">
@@ -46,5 +52,8 @@
       <Filter>MMU\CartridgeStructs</Filter>
     </ClInclude>
     <ClInclude Include="HeapBuffer\HeapBuffer.hpp" />
+    <ClInclude Include="CPU\CPU.hpp" />
+    <ClInclude Include="ThirdParty\json.hpp" />
+    <ClInclude Include="Utils\HexUtils.hpp" />
   </ItemGroup>
 </Project>

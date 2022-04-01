@@ -4,8 +4,9 @@
 class EmulatorRunner
 {
 public:
-	EmulatorRunner(const std::wstring& game_path) :
-		m_game_path(game_path)
+	EmulatorRunner(std::wstring game_path, std::wstring json_path) :
+		m_game_path(std::move(game_path)),
+		m_instruction_json_path(std::move(json_path))
 	{}
 
 	~EmulatorRunner() = default;
@@ -17,4 +18,5 @@ public:
 
 private:
 	std::wstring m_game_path;
+	std::wstring m_instruction_json_path;
 };

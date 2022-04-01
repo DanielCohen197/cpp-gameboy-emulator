@@ -12,9 +12,9 @@ HeapBuffer::~HeapBuffer()
 	catch (...) {}
 }
 
-uint8_t* HeapBuffer::_s_heap_alloc(const uint32_t size)
+uint8_t* HeapBuffer::s_heap_alloc_(const uint32_t size)
 {
-	const auto allocated_address = reinterpret_cast<uint8_t *>(HeapAlloc(GetProcessHeap(), HEAP_ZERO_MEMORY, size));
+	const auto allocated_address = static_cast<uint8_t *>(HeapAlloc(GetProcessHeap(), HEAP_ZERO_MEMORY, size));
 	if (nullptr == allocated_address)
 	{
 		throw std::runtime_error("HeapAlloc() failed");
